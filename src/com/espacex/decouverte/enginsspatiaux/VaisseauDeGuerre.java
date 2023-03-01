@@ -1,8 +1,10 @@
-public class VaisseauDeGuerre extends Vaisseau{
+package com.espacex.decouverte.enginsspatiaux;
 
-    boolean armesDesactivees = true;
+public class VaisseauDeGuerre extends Vaisseau {
 
-    VaisseauDeGuerre(TypeVaisseau type){
+    public boolean armesDesactivees = true;
+
+    public VaisseauDeGuerre(TypeVaisseau type){
         this.type = type;
         if (type==TypeVaisseau.CHASSEUR){
             this.tonnageMax = 0;
@@ -21,7 +23,7 @@ public class VaisseauDeGuerre extends Vaisseau{
     }
 
 
-    void attaque(Vaisseau cibleVaisseau,String armeUtilisee, int dureeDeLattaque){
+    void attaque(Vaisseau cibleVaisseau, String armeUtilisee, int dureeDeLattaque){
         if (armesDesactivees == true){
             System.out.println( "Attaque impossible, l'armement est désactivé");
         } else {
@@ -33,7 +35,7 @@ public class VaisseauDeGuerre extends Vaisseau{
         }
     };
 
-    void desctiverArmes(boolean armesDesactivees){
+    public void desctiverArmes(boolean armesDesactivees){
         if (armesDesactivees == true){
             System.out.println("Désactivation des armes d'un vaisseau de type "+this.type);
         }
@@ -50,7 +52,7 @@ public class VaisseauDeGuerre extends Vaisseau{
     }
 
     @Override
-    int emporterCargaison(int cargaison) {
+    public int emporterCargaison(int cargaison) {
         if (type.equals("Chasseur")){
             return cargaison;
         } else{

@@ -1,10 +1,16 @@
+package com.espacex.decouverte.objetsastro;
+
+import com.espacex.decouverte.enginsspatiaux.TypeVaisseau;
+import com.espacex.decouverte.enginsspatiaux.Vaisseau;
+import com.espacex.decouverte.enginsspatiaux.VaisseauDeGuerre;
+
 public class PlaneteTellurique extends Planete implements Habitable{
 
     int totalVisiteurs;
     Vaisseau[][] baieDaccostage;
 
 
-    PlaneteTellurique(String nom,long diametre,int TailleBaie){
+    public PlaneteTellurique(String nom, long diametre, int TailleBaie){
         super(nom,diametre);
         this.baieDaccostage =new Vaisseau[TailleBaie][TailleBaie];
     }
@@ -24,7 +30,8 @@ public class PlaneteTellurique extends Planete implements Habitable{
         return false;
     }
 
-    @Override
+
+@Override
     public void acceuillirVaisseaux(Vaisseau... vaisseaux) {
         for (int indexVaisseau=0; indexVaisseau<vaisseaux.length; indexVaisseau++){
 
@@ -60,4 +67,6 @@ public class PlaneteTellurique extends Planete implements Habitable{
 
 
     }
+
+
 }

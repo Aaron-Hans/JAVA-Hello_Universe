@@ -1,3 +1,5 @@
+package com.espacex.decouverte.enginsspatiaux;
+
 public enum TypeVaisseau {
     CHASSEUR("Chasseur"),
     FREGATE("Frégate"),
